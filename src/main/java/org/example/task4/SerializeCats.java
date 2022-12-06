@@ -19,9 +19,9 @@ public class SerializeCats {
                 ){
             objOutStream.writeObject(catList);
         } catch (FileNotFoundException e) {
-            throw new RuntimeException(e);
+            e.printStackTrace();
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            e.printStackTrace();
         }
     }
 }

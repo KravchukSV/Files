@@ -8,18 +8,18 @@ import java.util.List;
 
 public class DeserializeCats {
     public static void main(String[] args) {
-        List<Cat> catList;
+        List<Cat> catList = null;
 
         try(
                 ObjectInputStream objIntStream = new ObjectInputStream(new FileInputStream("./task4/Cat List"))
                 ) {
             catList = (List<Cat>) objIntStream.readObject();
         } catch (FileNotFoundException e) {
-            throw new RuntimeException(e);
+            e.printStackTrace();
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            e.printStackTrace();
         } catch (ClassNotFoundException e) {
-            throw new RuntimeException(e);
+            e.printStackTrace();
         }
 
         System.out.println(catList);

@@ -20,7 +20,7 @@ public class TestFileWrite {
         try (FileWriter fileWriter = new FileWriter(file)){
             fileWriter.write(str);
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            e.printStackTrace();
         }
     }
 }
